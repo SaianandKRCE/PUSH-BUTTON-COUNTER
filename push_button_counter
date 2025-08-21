@@ -1,0 +1,48 @@
+MENTOR NAME : NEELA SANTHOSH
+DOMAIN : EMBEDDED SYSTEMS
+INTERN ID: CT04DY586
+
+
+TASK DESCRIPTION: 
+The project involves designing and implementing a microcontroller-based system with two key functionalities:
+
+1. Push Button Counter
+
+   * A push button will be interfaced with the microcontroller.
+   * Each press of the button will increment a counter value.
+   * The counter value will be displayed either on an LCD screen or via the Serial Monitor.
+
+2. Temperature Sensor Integration
+
+   * A temperature sensor (such as LM35, DHT11, or DS18B20) will be connected to the microcontroller.
+   * The system will continuously read real-time temperature data from the sensor.
+   * The measured temperature will be displayed alongside the counter value on the LCD or Serial Monitor.
+
+Expected Outcome
+
+* When the button is pressed, the counter value should update correctly.
+* The current temperature reading from the sensor should be visible at all times.
+* Both values (counter and temperature) should be displayed simultaneously on the chosen output device.
+
+WORKING PRINCIPLE: 
+
+The system works by combining **digital input (push button)** with **analog/digital sensor input (temperature sensor)** and displaying both outputs on an LCD or Serial Monitor.
+
+1. Push Button Counter
+
+   * A push button is connected to the microcontroller as a digital input.
+   * Each time the button is pressed, the microcontroller detects a change in logic state (HIGH to LOW or vice versa).
+   * An internal counter variable is incremented with every valid press (debouncing may be applied to avoid multiple counts for a single press).
+   * The updated counter value is then sent to the display.
+
+2. Temperature Sensor Reading
+
+   * The temperature sensor (e.g., LM35, DHT11, or DS18B20) senses the surrounding temperature and converts it into an electrical signal.
+   * The microcontroller reads this signal either through an **analog-to-digital converter (ADC)** (for LM35) or via digital communication protocols (for DHT11/DS18B20).
+   * The sensor value is then processed to convert raw data into temperature units (°C or °F).
+
+3. Data Display
+
+   * Both the **counter value** and the **temperature reading** are sent to the output display.
+   * If using an **LCD**, the values are displayed simultaneously (e.g., first line: Counter, second line: Temperature).
+   * If using the **Serial Monitor**, the microcontroller continuously sends both values via UART for real-time monitoring.
